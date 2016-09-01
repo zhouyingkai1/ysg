@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>忆时光-专注于提供纪念册、个性印刷品制作服务</title>
+    <meta name=”keywords”coutent=”忆时光纪念册,毕业纪念册,个性印刷品”>
+    <meta name=”description”coutent=”忆时光专注于提供纪念册、个性印刷品，不仅提供完整的班级毕业纪念册拍摄整体服务、毕业周年聚会打包服务。同时还可以制作各类型的个性印刷品，包括个性笔记本、台历挂历、T恤等等，只有你想不到的，没有忆时光做不到的。”>
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
+<header>
+    <p>
+        <a href="/"></a>
+    </p>
+    <nav>
+        <ul>
+            <li class="active"><a href="">首页</a></li>
+            <li ><a href="">纪念册</a></li>
+            <li><a href="">个性印品</a></li>
+            <li><a href="">线下体验</a></li>
+            <li><a href="">淘宝选购</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="banner">
+  <div class="index">
+    <div class="index_main">
+      <ul>
+        <li class="active"><img src="./images/test1.jpg" alt=""></li>
+        <li><img src="./images/test2.jpg" alt=""></li>
+        <li><img src="./images/test3.jpg" alt=""></li>
+        <li><img src="./images/test4.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>
+    <p>
+        时光流影科技股份有限公司 皖B2-20120055 皖ICP备10017145-4号
+    </p>
+    <p>
+        时光流影旗下产品：时光书、QQ相册书、博客书
+    </p>
+    <p>
+        Emall：hezuo@timeface.cn
+    </p>
+</footer>
+<script src="./js/jquery-3.1.0.min.js"></script>
+<script>
+  var i=0;
+  var li=$('.index_main li');
+  for(var j=0;j<li.length;j++){
+    li.eq(j).click(function(){
+      i=j;
+    })
+  }
+  setInterval(function(){
+    i++;
+    var li=$('.index_main li');
+    li.eq(i).addClass('active').siblings().removeClass();
+    var img=li.eq(i).find('img');
 
+    $('.banner').css('background',"url('./images/test"+(i+1)+".jpg')")
+    if(i>= li.length-1){
+      i=-1;
+    }
+  },3000)
+</script>
 </body>
 </html>
