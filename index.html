@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="./style/public.css">
     <link rel="stylesheet" href="./style/index.css">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UdT8U2vXNkEQC1oi1IjGu8r45fM6rSxv">  </script>
 </head>
 <body>
 <header>
@@ -17,28 +18,99 @@
     <nav>
         <ul>
             <li class="active"><a href="">首页</a></li>
-            <li ><a href="">纪念册</a></li>
-            <li><a href="">个性印品</a></li>
+            <li ><a href="/memorialbook">纪念册</a></li>
+            <li><a href="/personal">个性印品</a></li>
             <li><a href="">线下体验</a></li>
             <li><a href="">淘宝选购</a></li>
-            <li><a href="">关于我们</a></li>
+            <li><a href="/about">关于我们</a></li>
         </ul>
     </nav>
 </header>
+<div class="top_nav">
+  <div class="nav_main">
+    <p><img src="./images/logo.png" alt=""></p>
+    <ul>
+      <li class="active"><a href="">首页</a></li>
+      <li ><a href="">纪念册</a></li>
+      <li><a href="">个性印品</a></li>
+      <li><a href="">线下体验</a></li>
+      <li><a href="">淘宝选购</a></li>
+      <li><a href="">关于我们</a></li>
+    </ul>
+  </div>
+</div>
+
 <div class="banner">
+  <ul>
+    <li class="active" style="z-index:99"><img src="./images/banner1.jpg" alt=""></li>
+    <li><img src="./images/banner2.jpg" alt=""></li>
+    <li ><img src="./images/banner3.jpg" alt=""></li>
+    <li><img src="./images/banner4.jpg" alt=""></li>
+    <li><img src="./images/banner5.jpg" alt=""></li>
+  </ul>
   <div class="index">
     <div class="index_main">
       <ul>
-        <li class="active"><img src="./images/test1.jpg" alt=""></li>
-        <li><img src="./images/test2.jpg" alt=""></li>
-        <li><img src="./images/test3.jpg" alt=""></li>
-        <li><img src="./images/test4.jpg" alt=""></li>
+        <li class="active"> <b></b><img src="./images/banner1.jpg" alt=""></li>
+        <li><b></b><img src="./images/banner2.jpg" alt=""></li>
+        <li ><b></b><img src="./images/banner3.jpg" alt=""></li>
+        <li><b></b><img src="./images/banner4.jpg" alt=""></li>
+        <li><b></b><img src="./images/banner5.jpg" alt=""></li>
       </ul>
     </div>
   </div>
 </div>
+<section>
+  <div class="fir">
+    <ul>
+      <li><img src="./images/y1.png" alt=""> <span>品质优选</span></li>
+      <li><img src="./images/y2.png" alt=""> <span>制作精美</span></li>
+      <li><img src="./images/y3.png" alt=""> <span>一本起印</span></li>
+      <li><img src="./images/y4.png" alt=""> <span>线下体验</span></li>
+    </ul>
+  </div>
+  <h6></h6>
+  <div class="jnc">
+    <div class="j_left">
+      <div class="j_l_main">
+        <h1>精美纪念册</h1>
+        <p>这一本 <b>，</b>把每个重要时刻写成诗</p>
+      </div>
+    </div>
+    <div class="j_mid">
+      <p><img src="./images/growup.png" alt=""></p>
+      <div class="f_pic">
+        <img src="./images/love.jpg" alt="">
+      </div>
+     <div class="r_pic">
+       <img src="./images/party.jpg" alt="">
+     </div>
+    </div>
+    <div class="j_right">
+      <img src="./images/biye.jpg" alt="">
+    </div>
+  </div>
+</section>
+<div class="sec">
+  <div class="sec_main">
+    <p><span>多样式风格</span>满足每一种审美追求</p>
+    <ul>
+      <li>
+        <p><img src="./images/d1.jpg" alt=""></p>
+        <div class="sec_main">
+          <p>蝴蝶精装对裱</p>
+          <h4></h4>
+          <h5>低调奢华有内涵</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div id="container" ></div>
 <footer>
-    <p>
+·    <p>
         时光流影科技股份有限公司 皖B2-20120055 皖ICP备10017145-4号
     </p>
     <p>
@@ -48,26 +120,57 @@
         Emall：hezuo@timeface.cn
     </p>
 </footer>
+<script src="./js/public.js">
+
+</script>
+<script type="text/javascript">
+  var map = new BMap.Map("container");
+  var point = new BMap.Point(118.375345,31.284291);
+  map.addControl(new BMap.NavigationControl());
+  map.addControl(new BMap.ScaleControl());
+  map.addControl(new BMap.OverviewMapControl());
+  map.addControl(new BMap.MapTypeControl());
+  var marker = new BMap.Marker(point);
+  var stCtrl = new BMap.PanoramaControl();
+  stCtrl.setOffset(new BMap.Size(20, 20));
+  map.addControl(stCtrl);
+  marker.enableDragging();
+  marker.addEventListener("dragend", function(e){
+    alert("当前位置：" + e.point.lng + ", " + e.point.lat);
+  })
+  map.addOverlay(marker)
+  map.centerAndZoom(point, 15);
+</script>
 <script src="./js/jquery-3.1.0.min.js"></script>
 <script>
   var i=0;
   var li=$('.index_main li');
-  for(var j=0;j<li.length;j++){
-    li.eq(j).click(function(){
-      i=j;
-    })
-  }
-  setInterval(function(){
-    i++;
-    var li=$('.index_main li');
-    li.eq(i).addClass('active').siblings().removeClass();
-    var img=li.eq(i).find('img');
 
-    $('.banner').css('background',"url('./images/test"+(i+1)+".jpg')")
+  for(var j=0;j<li.length;j++){
+    li[j].index=j;
+    li.eq(j).mouseover(function(){
+      li.eq(this.index).addClass('active').siblings().removeClass();
+      $('.banner>ul>li').eq(this.index).css('opacity','1').siblings().css('opacity','0');
+      i=this.index;
+    });
+  }
+  var timer=null;
+  function move(){
+    var li=$('.index_main li');
+
     if(i>= li.length-1){
       i=-1;
     }
-  },3000)
+    i++;
+    li.eq(i).addClass('active').siblings().removeClass();
+    $('.banner>ul>li').eq(i).css('opacity','1').siblings().css('opacity','0');
+  }
+   timer=setInterval(move,3000);
+  $('.banner').mouseover(function(){
+    clearInterval(timer)
+  }).mouseout(function(){
+    timer=setInterval(move,3000);
+  })
 </script>
 </body>
 </html>
