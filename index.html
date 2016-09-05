@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="./style/public.css">
     <link rel="stylesheet" href="./style/index.css">
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UdT8U2vXNkEQC1oi1IjGu8r45fM6rSxv">  </script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SL3T7e4I7OlSIV9zF9XdaAETgrGnoFFS">  </script>
 </head>
 <body>
 <header>
@@ -20,7 +20,7 @@
             <li class="active"><a href="">首页</a></li>
             <li ><a href="/memorialbook">纪念册</a></li>
             <li><a href="/personal">个性印品</a></li>
-            <li><a href="">线下体验</a></li>
+          <li><a href="/#container">线下体验</a></li>
             <li><a href="">淘宝选购</a></li>
             <li><a href="/about">关于我们</a></li>
         </ul>
@@ -31,11 +31,11 @@
     <p><img src="./images/logo.png" alt=""></p>
     <ul>
       <li class="active"><a href="">首页</a></li>
-      <li ><a href="">纪念册</a></li>
-      <li><a href="">个性印品</a></li>
-      <li><a href="">线下体验</a></li>
+      <li ><a href="/memorialbook">纪念册</a></li>
+      <li><a href="/personal">个性印品</a></li>
+      <li><a href="/#container">线下体验</a></li>
       <li><a href="">淘宝选购</a></li>
-      <li><a href="">关于我们</a></li>
+      <li><a href="/about">关于我们</a></li>
     </ul>
   </div>
 </div>
@@ -104,11 +104,96 @@
         </div>
       </li>
     </ul>
+
+    <ul>
+      <li>
+        <p><img src="./images/d2.jpg" alt=""></p>
+        <div class="sec_main">
+          <p>水晶封壳精装</p>
+          <h4></h4>
+          <h5>少女心爆款</h5>
+        </div>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <p><img src="./images/d3.jpg" alt=""></p>
+        <div class="sec_main">
+          <p>皮质封壳精装</p>
+          <h4></h4>
+          <h5>商务精英必备</h5>
+        </div>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <p><img src="./images/d4.jpg" alt=""></p>
+        <div class="sec_main">
+          <p>简易平装</p>
+          <h4></h4>
+          <h5>小清新最爱</h5>
+        </div>
+      </li>
+    </ul>
   </div>
 
 </div>
+<div class="print">
+  <p><span>进口印刷设备</span>满从原料到工艺，看得到的匠心</p>
+  <div class="print_main">
+    <span> <img src="./images/txt.jpg" alt=""></span>
+    <div class="p_right">
+      <i><img src="./images/mo.png" alt=""></i>
+    </div>
+  </div>
+</div>
+<div class="step">
+  <p><span>体验流程</span>快捷简便，极致从容体验</p>
+  <ul>
+    <li class="t_pic"><p><img src="./images/t1.png" alt=""></p><span>淘宝选购</span>
+      <p><img src="./images/t5.png" alt=""></p><span>线下体验中心</span>
+      </li>
+    <li class="arrow"></li>
+    <li><p><img src="./images/t3.png" alt=""></p><span>确定服务内容</span>
+      </li>
+    <li class="arrow"></li>
+    <li><p><img src="./images/t4.png" alt=""></p><span>印刷制作</span>
+    </li>
+    <li class="arrow"></li>
+    <li class="t_pic"><p><img src="./images/t6.png" alt=""></p><span>快递派送</span>
+      <p><img src="./images/t7.png" alt=""></p><span>实体店自取</span>
+      </li>
+  </ul>
+</div>
+<div class="baidu_map">
+  <div class="map_box">
+    <p><span>线下体验中心</span>满满的诚意，体验更加完美</p>
+    <div class="sel">
+      <select name="pro" id="pro">
+        <option value="0">安徽省</option>
+      </select>
+      <select name="city" id="city">
+        <option value="0">合肥</option>
+      </select>
+      <select name="add" id="add">
+        <option value="0">请选择</option>
+        <option value="1">蜀山区</option>
+        <option value="2">包河区</option>
+        <option value="3">庐阳区</option>
+        <option value="4">瑶海区</option>
+        <option value="5">经济技术开发区</option>
+        <option value="6">高新区</option>
+        <option value="7">滨湖新区</option>
+        <option value="8">新站区</option>
+      </select>
+    </div>
+    <div id="container" class="map_main" >
+    </div>
+  </div>
+</div>
 
-<div id="container" ></div>
 <footer>
 ·    <p>
         时光流影科技股份有限公司 皖B2-20120055 皖ICP备10017145-4号
@@ -120,24 +205,41 @@
         Emall：hezuo@timeface.cn
     </p>
 </footer>
+
+<!--qq交谈框-->
+<div class="concat">
+  <h1>在线咨询</h1>
+  <ul>
+    <li><a href="">58481518</a></li>
+    <li><a href="">848121518</a></li>
+    <li><a href="">218481518</a></li>
+
+  </ul>
+  <div class="phone">
+    <h2>联系电话</h2>
+    <h3>400-155-1399</h3>
+  </div>
+
+</div>
+<!--返回顶部-->
+<p id="backTop" class="back">
+
+  回顶部
+</p>
+
+
 <script src="./js/public.js">
 
 </script>
 <script type="text/javascript">
   var map = new BMap.Map("container");
-  var point = new BMap.Point(118.375345,31.284291);
+  var point = new BMap.Point(117.218138,31.846293);
   map.addControl(new BMap.NavigationControl());
   map.addControl(new BMap.ScaleControl());
-  map.addControl(new BMap.OverviewMapControl());
-  map.addControl(new BMap.MapTypeControl());
   var marker = new BMap.Marker(point);
   var stCtrl = new BMap.PanoramaControl();
   stCtrl.setOffset(new BMap.Size(20, 20));
   map.addControl(stCtrl);
-  marker.enableDragging();
-  marker.addEventListener("dragend", function(e){
-    alert("当前位置：" + e.point.lng + ", " + e.point.lat);
-  })
   map.addOverlay(marker)
   map.centerAndZoom(point, 15);
 </script>
