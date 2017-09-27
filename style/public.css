@@ -1,0 +1,220 @@
+body {
+  background: #fff;
+}
+.top_nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  opacity: 0;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 1px  4px #eee;
+}
+.top_nav .nav_main {
+  width: 1001px;
+  height: 60px;
+  margin: 0 auto;
+}
+.top_nav p {
+  float: left;
+  width: 145px;
+  height: 60px;
+}
+.top_nav p img {
+  width: 100%;
+  margin-top: 5px;
+}
+.top_nav ul {
+  float: right;
+  overflow: hidden;
+}
+.top_nav ul li {
+  float: left;
+  text-align: right;
+  margin-left: 66px;
+  height: 45px;
+  line-height: 60px;
+}
+.top_nav ul li a {
+  color: #000;
+  font-size: 16px;
+}
+.top_nav ul li.active {
+  border-bottom: 2px solid #c47d39;
+}
+.top_nav ul li.active a {
+  color: #c47d39;
+  font-weight: bold;
+}
+header {
+  height: 210px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 1px  4px #eee;
+}
+header:before {
+  content: '';
+  display: table;
+}
+header > p {
+  height: 56px;
+  width: 178px;
+  margin: 70px auto 32px;
+  background: url('../images/logo.png') no-repeat;
+  position: relative;
+  left: -30px;
+}
+header > p a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header nav ul {
+  width: 820px;
+  margin: 0 auto;
+}
+header nav ul li {
+  float: left;
+  text-align: right;
+  margin: 0 40px;
+  height: 34px;
+}
+header nav ul li a {
+  color: #000;
+  font-size: 16px;
+}
+header nav ul li.active {
+  border-bottom: 2px solid #c47d39;
+}
+header nav ul li.active a {
+  color: #c47d39;
+  font-weight: bold;
+}
+footer {
+  width: 100%;
+  height: 110px;
+  padding-top: 20px;
+  background: #fff;
+}
+footer p {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+footer p:first-child {
+  color: #333;
+}
+.concat {
+  display: none;
+  position: fixed;
+  bottom: 234px;
+  right: 15px;
+  height: 465px;
+  width: 320px;
+  z-index: 102;
+  background: url('../images/qqbg.png') no-repeat top center;
+}
+.concat h1 {
+  line-height: 80px;
+  height: 80px;
+  font-size: 28px;
+  color: #492d09;
+  padding-left: 70px;
+  position: relative;
+}
+.concat h1 .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  cursor: pointer;
+  background: url('../images/close.png') no-repeat;
+}
+.concat ul {
+  padding: 1px;
+  padding-left: 22px;
+}
+.concat ul li {
+  height: 75px;
+  border-top: 1px solid #fff;
+  background-color: #f8f8f8;
+  padding-left: 57px;
+  line-height: 75px;
+  font-size: 24px;
+  transition: all .2s ease;
+}
+.concat ul li:hover {
+  background-color: #fcefe1;
+}
+.concat ul li:hover a {
+  color: #9f6e2e;
+}
+.concat ul li:hover a:before {
+  background: url('../images/qqhover.png') no-repeat top center;
+}
+.concat ul li a {
+  color: #333;
+}
+.concat ul li a:before {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  width: 29px;
+  background: url('../images/qq.png') no-repeat top center;
+  margin-right: 30px;
+  position: relative;
+  top: 4px;
+}
+.concat .phone {
+  padding-left: 83px;
+  margin-top: 15px;
+  color: #353434;
+  font-size: 24px;
+}
+.concat .phone h2:before {
+  content: '';
+  display: inline-block;
+  height: 28px;
+  width: 29px;
+  background: url('../images/phone.png') no-repeat top center;
+  position: relative;
+  margin-right: 30px;
+  top: 5px;
+}
+.concat .phone h3 {
+  font-size: 32px;
+  color: #959595;
+  font-weight: normal;
+  margin-left: -10px;
+}
+.back {
+  position: fixed;
+  bottom: 195px;
+  right: 22px;
+  height: 58px;
+  width: 60px;
+  background: url('../images/backtop.png') no-repeat top center;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+.concat_btn {
+  position: fixed;
+  bottom: 253px;
+  right: 22px;
+  height: 38px;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: #eabf95;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  color: #492d09;
+}

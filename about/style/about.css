@@ -1,0 +1,37 @@
+section {
+  padding: 30px 0 45px;
+  background: #f6f6f6;
+}
+section .main {
+  padding: 10px 30px 45px 25px;
+  width: 946px;
+  margin: 0 auto;
+  height: 440px;
+  background: #fff;
+}
+section .main .left {
+  float: left;
+  width: 686px;
+}
+section .main .left h1 {
+  font-size: 18px;
+  color: #492d09;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+section .main .left p {
+  text-indent: 2em;
+  color: #333;
+  font-size: 14px;
+  line-height: 2em;
+}
+section .main .right {
+  float: right;
+  width: 250px;
+  height: 407px;
+  margin-top: 30px;
+}
+section .main .right img {
+  width: 100%;
+}
